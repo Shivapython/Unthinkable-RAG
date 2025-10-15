@@ -137,44 +137,6 @@ This README is intentionally concise and practical: overview, architecture, quic
 - FAISS vector store for efficient nearest-neighbour search
 - RAG pipeline to synthesize answers from retrieved context
 
-## ASCII architecture (overview)
-
-User Interface
--- Web UI / CLI
-	|
-	| HTTP / CLI requests
-	v
-API Layer
--- Flask / FastAPI (app.py)
-	|
-	| -> Ingestion
-	|    -- File upload (PDF / TXT)
-	|    -- Text extraction and cleaning
-	|    -- Chunking (sliding-window)
-	v
-	| -> Indexing
-	|    -- Embedding model
-	|    -- FAISS vector store (`faiss_index/index.faiss` + `index.pkl`)
-	v
-	| -> Retrieval
-	|    -- Query embedding
-	|    -- FAISS similarity search (top-k)
-	v
-	| -> RAG / Answer Synthesis
-	|    -- Context assembly (snippets + metadata)
-	|    -- LLM prompt and generation
-	v
-	Response
--- Answer + citations (snippets, scores, metadata)
-
-## Quickstart (macOS / Linux)
-
-Prerequisites
-
-- Python 3.10+ (3.11 recommended)
-- Git
-- Virtual environment (venv or conda)
-- API key(s) for your chosen embedding/LLM provider
 
 Setup
 
