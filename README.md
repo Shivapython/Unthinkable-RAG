@@ -61,7 +61,7 @@ Steps
 
 1) Clone the repository
 
-	git clone https://github.com/Ankitatiwary21/KNOWLEDGE_BASE_SEARCH_ENGINE.git
+	git clone
 	cd KNOWLEDGE_BASE_SEARCH_ENGINE
 
 2) Create and activate a virtual environment (zsh)
@@ -179,7 +179,7 @@ Setup
 1) Clone the repository
 
 ```bash
-git clone https://github.com/Ankitatiwary21/KNOWLEDGE_BASE_SEARCH_ENGINE.git
+git clone 
 cd KNOWLEDGE_BASE_SEARCH_ENGINE
 ```
 
@@ -243,14 +243,6 @@ Open http://localhost:5000 (or the host/port in `app.py`) to access the UI.
 - Introduce an automated test that ingests a sample document and verifies expected answers.
 - Add CI to run linting and smoke tests on pull requests.
 
-## License
-
-This repository is provided as-is for demonstrations and prototyping. Add or confirm a license before distributing.
-
-Demo video (original): https://drive.google.com/file/d/1nZZUzF67ZHY6NqikBO1qi8NI1sdEiMKg/view?usp=sharing
-
-If you change the embedding or LLM provider, update the provider adapter in the codebase and ensure environment variables are set accordingly.
-
 ## Operational guidance
 
 - Run the server behind a WSGI/ASGI server (Gunicorn/Uvicorn) and use Nginx as a reverse proxy for production.
@@ -275,14 +267,6 @@ If you change the embedding or LLM provider, update the provider adapter in the 
 2. Create a feature branch (`git checkout -b feature/name`)
 3. Run tests and linters, then open a Pull Request
 
-## License & Author
-
-This repository is provided as-is for demonstrations and prototyping. Add or confirm a license before distributing.
-
-Author: Ankita Tiwary
-
-Demo video (original): https://drive.google.com/file/d/1nZZUzF67ZHY6NqikBO1qi8NI1sdEiMKg/view?usp=sharing
-
 ---
 
 If you want, I can also add a small FAISS health-check script or scaffold a minimal React frontend. Tell me which you'd prefer next.
@@ -306,31 +290,6 @@ git commit -m "Setup Git LFS for large files"
 
 
 
-
-🧠 Future Enhancements
-
-Add a simple React/Next.js frontend for user interaction
-
-Support for audio/video transcript ingestion
-
-Integration with cloud-hosted vector DBs (e.g., Pinecone, Chroma)
-
-Fine-tuning the retrieval pipeline for better accuracy
-
-
-
-
-
-👩‍💻 Author
-
-Ankita Tiwary
-📍 Jamshedpur, Jharkhand
-🎓 B.Tech 2026 | VIT-AP University
-🔗 https://www.linkedin.com/in/ankitatiwary21/
-
-
-
-DEMO VIDEO:https://drive.google.com/file/d/1nZZUzF67ZHY6NqikBO1qi8NI1sdEiMKg/view?usp=sharing
 
 
 
