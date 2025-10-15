@@ -20,33 +20,35 @@ This document contains an overview, ASCII architecture diagram, quickstart, oper
 
 ## Architecture (ASCII diagram)
 
+```text
 User Interface
 -- Web UI / CLI
-	|
-	| HTTP / CLI requests
-	v
+   |
+   | HTTP / CLI requests
+   v
 API Layer
 -- Flask / FastAPI (app.py)
-	|
-	| -> Ingestion
-	|    -- File upload (PDF / TXT)
-	|    -- Preprocessing (text extraction, cleaning)
-	|    -- Chunking (sliding window / configurable)
-	v
-	| -> Indexing
-	|    -- Embedding model (OpenAI / local)
-	|    -- FAISS vector store (faiss_index/index.faiss + index.pkl)
-	v
-	| -> Retrieval
-	|    -- Query embedding
-	|    -- FAISS similarity search (top-k candidates)
-	v
-	| -> RAG / Answer Synthesis
-	|    -- Context assembly (snippets + metadata)
-	|    -- LLM prompt & generation
-	v
-	Response
+   |
+   | -> Ingestion
+   |    -- File upload (PDF / TXT)
+   |    -- Preprocessing (text extraction, cleaning)
+   |    -- Chunking (sliding window / configurable)
+   v
+   | -> Indexing
+   |    -- Embedding model (OpenAI / local)
+   |    -- FAISS vector store (faiss_index/index.faiss + index.pkl)
+   v
+   | -> Retrieval
+   |    -- Query embedding
+   |    -- FAISS similarity search (top-k candidates)
+   v
+   | -> RAG / Answer Synthesis
+   |    -- Context assembly (snippets + metadata)
+   |    -- LLM prompt & generation
+   v
+Response
 -- Answer + citations (snippets, similarity scores, metadata)
+```
 
 ## Quickstart (macOS / Linux)
 
